@@ -27,21 +27,6 @@ def file_upload():
     print(npzobj['data'].shape)
     print(npzobj['labels'].shape)
 
-    train_generator = ImageDataGenerator(rescale = 1./255)
-    train_generator = train_generator.flow(
-        x=npzobj['data'],
-        y=npzobj['labels'],
-        batch_size=20,
-        shuffle=True,
-        sample_weight=None,
-        seed=None,
-        save_to_dir=None,
-        save_prefix='',
-        save_format='png',
-        ignore_class_split=False,
-        subset=None
-    )
-
     immagine = npzobj['data'][45]
     immagine_normalizzata = immagine.astype(numpy.float32) / 255.0  # Normalizzazione dei valori tra 0 e 1
 
