@@ -1,6 +1,5 @@
 def librarys_upload():
     seed = 42
-    print(seed)
     import os
 
 

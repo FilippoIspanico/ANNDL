@@ -7,16 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1qnAtVJOQ93PBrTubts7IsPhmQQ_0dwDd
 """
 
-import numpy
-import pandas
-import os
-from google.colab import drive
-from keras.preprocessing.image import ImageDataGenerator, NumpyArrayIterator
-import matplotlib.pyplot as plt
-from PIL import Image
-
-drive.mount('/content/drive')
-
 # Commented out IPython magic to ensure Python compatibility.
 # %pwd
 # %cd drive/MyDrive
@@ -26,9 +16,6 @@ npzobj = numpy.load('public_data.npz', allow_pickle=True)
 npzobj.files
 
 """npzobj is an object of the class npzfile. by accessing [data] we have a tensor of this sizes:
-
-
-
 """
 
 print(npzobj['data'].shape)
