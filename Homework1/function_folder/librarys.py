@@ -24,9 +24,3 @@ def librarys_upload():
     import matplotlib.pyplot as plt
     from sklearn.model_selection import train_test_split
 
-    # others
-    import numpy
-    import pandas
-    from keras.preprocessing.image import ImageDataGenerator, NumpyArrayIterator
-    import matplotlib.pyplot as plt
-    from PIL import Image
