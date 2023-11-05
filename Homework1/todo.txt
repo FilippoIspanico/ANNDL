@@ -1,0 +1,11 @@
+to do:
+
+-fix some typo in function names :	
+			 libraries <- librarys
+			import_data_and_visualization <- import_data_and_viusalization_		
+-fix model.0.py 
+	when launched raises an error ' undefined id tfk'
+	
+-fix input shape of model (or modify shape of the input array)
+	when launching function fit: 
+    	ValueError: Input 0 of layer "model" is incompatible with the layer: expected shape=(None, 224, 224, 3), found shape=(None, 96, 96, 3)
