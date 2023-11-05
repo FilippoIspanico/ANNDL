@@ -1,4 +1,4 @@
-import function_folder.librarys as lib
+from function_folder.librarys import *
 
 def file_upload():
 
@@ -17,7 +17,7 @@ def file_upload():
     # %pwd
     # %cd drive/MyDrive
 
-    npzobj = lib.np.load('public_data.npz', allow_pickle=True)
+    npzobj = np.load('public_data.npz', allow_pickle=True)
 
     npzobj.files
 
@@ -25,12 +25,12 @@ def file_upload():
     print(npzobj['labels'].shape)
 
     immagine = npzobj['data'][45]
-    immagine_normalizzata = immagine.astype(lib.np.float32) / 255.0  # Normalizzazione dei valori tra 0 e 1
+    immagine_normalizzata = immagine.astype(np.float32) / 255.0  # Normalizzazione dei valori tra 0 e 1
 
     # Plot dell'immagine RGB
-    lib.plt.imshow(immagine_normalizzata)
+    plt.imshow(immagine_normalizzata)
     string = str ( npzobj['labels'][45])
-    lib.plt.title(string)
-    lib.plt.axis('off')  # Rimuove gli assi
-    lib.plt.show()
+    plt.title(string)
+    plt.axis('off')  # Rimuove gli assi
+    plt.show()
     return (npzobj)
