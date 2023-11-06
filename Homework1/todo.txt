@@ -2,10 +2,33 @@ to do:
 
 -fix some typo in function names :	
 			 libraries <- librarys
-			import_data_and_visualization <- import_data_and_viusalization_		
--fix model.0.py 
-	when launched raises an error ' undefined id tfk'
+
+-da penguins importa funzioni histories plot
 	
--fix input shape of model (or modify shape of the input array)
-	when launching function fit: 
-    	ValueError: Input 0 of layer "model" is incompatible with the layer: expected shape=(None, 224, 224, 3), found shape=(None, 96, 96, 3)
+	
+-capire perche moltiplica X per 255
+ 
+	
+-trainare su convolution bases differenti 	
+	
+	
+
+
+
+workflow
+1) transfer learning sfruttando mobile net. Training con Categorical Crossentropy e early stopping 
+		test_accuracy 0.6962 test_loss = 0.5747
+
+2) aggiungiamo un layer avente n = 256 neuroni e poi ritraniamo. Training invariato rispetto al punto precedente. 			n is a parameter that can be modified
+		test_accuracy 0.6942 test_loss = 0.5568
+
+3) aggiugiamo un layer di dropout e impostiamo kernel initialization sul layer aggiunto al punto precedente. Training invariato rispetto al punto precedente.
+		test_accuracy = 0.7250  test_loss = 0.5908
+ 
+4) aggiungiamo learning rate sheduling. 
+		test_accuracy = 0.6885  test_loss = 0.8922
+		
+5) aggiungiamo k-fold cross validation. 
+		test_accuracy = 0.6885  test_loss = 0.8922
+		
+
