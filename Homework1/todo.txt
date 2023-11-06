@@ -11,7 +11,7 @@ to do:
 	
 -trainare su convolution bases differenti 	
 	
-	
+-ridurre a 1 il # neuroni nel output layer	
 
 
 
