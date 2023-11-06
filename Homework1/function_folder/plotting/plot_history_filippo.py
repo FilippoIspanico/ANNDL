@@ -1,4 +1,4 @@
-from matplotlib import pyplot as plt
+from function_folder.librarys import *
 
 def plot_history(history, smoothing = False): 
     

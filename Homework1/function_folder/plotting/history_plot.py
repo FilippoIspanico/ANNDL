@@ -1,3 +1,4 @@
+from function_folder.librarys import *
 def plot_history(history):
     plt.figure(figsize=(15,5))
     plt.plot(history['loss'], alpha=.3, color='#4D61E2', linestyle='--')

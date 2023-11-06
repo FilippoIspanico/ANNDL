@@ -1,4 +1,4 @@
-print("librerie in caricamento")
+print("librerie in caricamento_NEW")
 
 seed = 42
 import os
@@ -36,9 +36,10 @@ print(tf.__version__)
 #import cv2
 from tensorflow.keras.applications.mobilenet import preprocess_input
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
+from sklearn.model_selection import train_test_split, KFold
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix, mean_squared_error
 import seaborn as sns
+
 
 
 import pandas as pd
