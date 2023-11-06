@@ -9,7 +9,6 @@ from function_folder.librarys import *
 
 
 def image_augmenter():
-
     preprocessing = tf.keras.Sequential([
     tfkl.RandomFlip("horizontal"),
     tfkl.RandomTranslation(0.2,0.2),
@@ -18,19 +17,5 @@ def image_augmenter():
     tfkl.RandomBrightness(0.5, value_range=(0,1)),
     tfkl.RandomContrast(0.75),
     ], name='preprocessing')
+    return preprocessing
 
-
-    train_generator = ImageDataGenerator(rescale = 1./255)
-    train_generator = train_generator.flow(
-            x=npzobj['data'],
-            y=npzobj['labels'],
-            batch_size=20,
-            shuffle=True,
-            sample_weight=None,
-            seed=None,
-            save_to_dir=None,
-            save_prefix='',
-            save_format='png',
-            ignore_class_split=False,
-            subset=None
-        )
